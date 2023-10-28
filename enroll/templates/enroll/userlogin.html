@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User login</title>
+</head>
+<body>
+    <br>
+    {% if messages %}
+    {% for message in messages %}
+    <span  {% if message.tags %} class='{{message.tags}}' {% endif %}>
+        {{message}} 
+     </span>       
+     {% endfor %}
+     {% endif %}
+    <form action="" method="POST" >
+    {% csrf_token %}
+    {% for fm in form %}
+        {{fm.label_tag}} {{fm}} {{fm.errors|striptags}} <br><br>
+    {% endfor %}
+    <input type="submit" value="Login">
+    </form>
+    <br>
+    <a href="{% url 'signup' %}">Signup</a> <br><br>
+</body>
+</html>
