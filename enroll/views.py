@@ -44,7 +44,7 @@ def user_login(request):
 
 
 
-# userprofile function
+# user profile function
 
 def user_profile(request):
     if request.user.is_authenticated:
@@ -77,3 +77,8 @@ def user_change_password(request):
         return render(request,'enroll/changepass1.html',{'form':fm})
     else:
         return HttpResponseRedirect('/login/')
+
+
+
+
+
