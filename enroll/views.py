@@ -44,7 +44,7 @@ def user_login(request):
 
 
 
-#userprofile function
+# userprofile function
 
 def user_profile(request):
     if request.user.is_authenticated:
@@ -61,7 +61,7 @@ def user_logouot(request):
     messages.success(request,'Log out Successfully')        
     return HttpResponseRedirect('/login/')
 
-#password change with only two confirmation password
+# password change with only two confirmation password
 
 def user_change_password(request):
     if request.user.is_authenticated:
