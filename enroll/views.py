@@ -22,7 +22,7 @@ def sign_up(request):
 
 
 
-#user login function
+# user login function
 
 def user_login(request):
     if not request.user.is_authenticated:
